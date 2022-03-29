@@ -16,5 +16,8 @@
   "bugs": {
     "url": "https://github.com/cam-tran/formation/issues"
   },
-  "homepage": "https://github.com/cam-tran/formation#readme"
+  "homepage": "https://github.com/cam-tran/formation#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
 }

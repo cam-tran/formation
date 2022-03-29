@@ -1,6 +1,10 @@
  body{
      height: 99vh;
+     display:flex;
+     flex-direction: column;
  }
+
+ 
 .navbar-brand{
     color: grey;
     font-size: 32pt;
@@ -19,6 +23,11 @@
     text-align: center;
     border:1px solid black;
 
+}
+
+
+#wrapper{
+    flex-grow: 1;
 }
 
 #meme-creator{

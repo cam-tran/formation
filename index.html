@@ -15,39 +15,155 @@
 
     </head>
     <body>
-            <header>
-                <div class="navbar navbar-inverse">
-                    <a class="navbar-brand" href="#"> Meme
-                        <span style="font-style: italic;color:rgb(135, 178,
-                            235)">Generator</span> .
-                        <span style="font-style: italic;color:tomato">js</span></a>
-                    <ul class="nav navbar-nav">
-                        <li class="active">
-                            <a href="#">Home</a>
-                        </li>
-                        <li>
-                            <a href="#">Link</a>
-                        </li>
-                    </ul>
-                </div>
-            </header>
-            <div id="wrapper">
-                <div id="meme-creator">
-                    <div id="meme-viewer">
-                        <svg viewBox="0 0 281 470" xmlns="http://www.w3.org/2000/svg" xmlnx="http://www/w3.org.1999/xlink">
-                            <image xlink:href="/img/image1.jpg" x="0" y="0"></image>
-                            <text x="100" y="50" font-size="45" fill="white">DEMAT</text>
-                        </svg>    
-                    </div>
-                    <div id="meme-editor">Editor</div>
-                </div>
+        <header>
+            <div class="navbar navbar-inverse">
+                <a class="navbar-brand" href="#"> Meme
+                    <span style="font-style: italic;color:rgb(135, 178,
+                        235)">Generator</span> .
+                    <span style="font-style: italic;color:tomato">js</span></a>
+                <ul class="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                    <li>
+                        <a href="#">Link</a>
+                    </li>
+                </ul>
             </div>
+        </header>
+        <div id="wrapper">
+            <div id="meme-creator">
+                <div id="meme-viewer">
+                    <svg viewBox="0 0 281 470"
+                        xmlns="http://www.w3.org/2000/svg"
+                        xmlnx="http://www/w3.org.1999/xlink">
+                        <image xlink:href="/img/image1.jpg" x="0" y="0"></image>
+                        <text x="100" y="50" font-size="45" fill="white">DEMAT</text>
+                    </svg>
+                </div>
+                <div id="meme-editor">
+                    <h1>Editor</h1>
+                    <hr/>
+                        <form id="meme-form" name="meme-form">
+                            <label for="meme-name">Nom : </label>
+                            <br/><input type="text" name="meme-text"
+                                    id="meme-text"></input>
+                            <hr/>
+                                <label for="meme-image">Image : </label>
+                                <br/><select name="meme-select">
+                                        <option value="no image">No image</option>
+                                        <option value="image1.jpg">image1</option>
+                                    </select>
 
-       
-            <footer>
-                footer
-            </footer>
-       
+                                    <hr/>
+                                        <br/>
 
-    </body>
-</html>
+                                            <label for="meme-texte">Texte :
+                                            </label>
+                                            <br/><input type="text"
+                                                    name="meme-text"
+                                                    id="meme-text"></input>
+                                            <br/><br/>
+                                                    <div class="flex-2-cols">
+                                                        <div>
+                                                            <label for="meme-x">X
+                                                                : </label>
+                                                            <br/><input
+                                                                    type="number"
+                                                                    name="meme-text-x"
+                                                                    id="meme-text-x"></input>
+                                                        </div>
+                                                        <div>
+                                                            <label for="meme-y">Y
+                                                                : </label>
+                                                            <br/><input
+                                                                    type="number"
+                                                                    name="meme-text-y"
+                                                                    id="meme-text-y"></input>
+                                                        </div>
+                                                    </div>
+                                                    <br/>
+                                                        <div
+                                                            class="flex-2-cols">
+                                                            <div>
+                                                                <label
+                                                                    for="meme-fontSize">fontSize
+                                                                    : </label>
+                                                                <br/><input
+                                                                        type="number"
+                                                                        name="meme-fontSize"
+                                                                        id="meme-fontSize"></input>
+                                                            </div>
+                                                            <div>
+                                                                <label
+                                                                    for="meme-fontWeight">fontWeight
+                                                                    : </label>
+                                                                <br/><input
+                                                                        type="number"
+                                                                        name="meme-fontWeight"
+                                                                        id="meme-fontWeight"></input>
+                                                            </div>
+                                                        </div>
+                                                        <br/>
+                                                            <div
+                                                                class="flex-2-cols">
+                                                                <div>
+                                                                    <label
+                                                                        for="meme-underline">underline
+                                                                        :
+                                                                    </label>
+                                                                    <input
+                                                                        type="checkbox"
+                                                                        name="meme-underline"
+                                                                        id="meme-underline"></input>
+                                                            </div>
+                                                            <div>
+                                                                <label
+                                                                    for="meme-italic">italic
+                                                                    : </label>
+                                                                <input
+                                                                    type="checkbox"
+                                                                    name="meme-italic"
+                                                                    id="meme-italic"></input>
+                                                        </div>
+                                                    </div>
+                                                    <br/>
+                                                        <div
+                                                            class="flex-2-cols">
+                                                            <label
+                                                                for="meme-color">Color</label>
+                                                            <br/><input
+                                                                    type="color"
+                                                                    id="meme-color"
+                                                                    ,
+                                                                    name="meme-color"></input>
+                                                        </div>
+                                                        <br/>
+                                                            <div
+                                                                class="flex-2-cols">
+                                                                <button
+                                                                    type="reset"
+                                                                    class="btn
+                                                                    btn-danger">Annuler</button>
+                                                                <button
+                                                                    type="submit"
+                                                                    class="btn
+                                                                    btn-success">Soumettre</button>
+                                                            </div>
+                                                            <hr/>
+
+
+                                                            </form>
+
+                                                        </div>
+                                                    </div>
+                                                </div>
+
+
+                                                <footer>
+                                                    footer
+                                                </footer>
+
+
+                                            </body>
+                                        </html>

@@ -4,7 +4,7 @@
      flex-direction: column;
  }
 
- 
+
 .navbar-brand{
     color: grey;
     font-size: 32pt;
@@ -43,5 +43,15 @@
 
 #meme-creator>div:nth-child(2){
     padding: 10px 20px;
+    min-width: 330px;
 
+}
+
+.flex-2-cols{
+    display: flex;
+    justify-content: space-around;
+}
+
+.flex-2-cols>div>input[type="number"]{
+        width: 100px;
 }

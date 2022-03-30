@@ -15,4 +15,6 @@ function Meme(){
     this.image ='image1.jpg';
     console.log(this);
 }
-var unMemeGlobal=new Meme();
+
+//object dont la forme ne peut pas changer
+var unMemeGlobal= Object.seal(new Meme());

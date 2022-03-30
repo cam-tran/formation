@@ -7,6 +7,7 @@ function lorsDuChargementDeLaPage(){
     console.log('JS est chargé', baliseisJsLoaded );
     baliseisJsLoaded.innerHTML = 'JS chargé';
     baliseisJsLoaded.className='isLoaded';
+    initFormEvents();
 }
 //add un ecouteur d'evenement
 // losrque DOMContentLoaded est chargé on appelle la fonction lorsDuChargementDeLaPage
@@ -45,3 +46,15 @@ function setMemeOnSVGViewer(meme){
     svgTextNode.style.textDecoration = (meme.underline ? 'underline':'none');
 
 }
+
+
+function initFormEvents(){
+    document.forms["meme-form"]["meme-text"]
+   // .addEventListener('change', function(evt){
+    .addEventListener('input', function(evt){
+        unMemeGlobal.text = evt.target.value;
+        setMemeOnSVGViewer(unMemeGlobal);
+    })
+}
+
+

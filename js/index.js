@@ -1,2 +1,4 @@
+
+var baliseisJsLoaded = document.querySelector("#isJsLoaded");
 console.log('JS est chargé');
-document.querySelector("#isJsLoaded").remove();
+baliseisJsLoaded.innerHTML = 'JS chargé';

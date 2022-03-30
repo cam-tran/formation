@@ -55,6 +55,54 @@ function initFormEvents(){
         unMemeGlobal.text = evt.target.value;
         setMemeOnSVGViewer(unMemeGlobal);
     })
+
+    document.forms["meme-form"]["meme-x"]
+    .addEventListener('input',function(evt){
+        unMemeGlobal.x = evt.target.value;
+        setMemeOnSVGViewer(unMemeGlobal);
+    
+    })
+
+    document.forms["meme-form"]["meme-y"]
+    .addEventListener('input',function(evt){
+        unMemeGlobal.y = evt.target.value;
+        setMemeOnSVGViewer(unMemeGlobal);
+    
+    })
+
+
+    document.forms["meme-form"]["meme-fontSize"]
+    .addEventListener('input',function(evt){
+        unMemeGlobal.fontSize = evt.target.value;
+        setMemeOnSVGViewer(unMemeGlobal);
+    
+    })
+
+    document.forms["meme-form"]["meme-fontWeight"]
+    .addEventListener('input',function(evt){
+        unMemeGlobal.fontWeight = evt.target.value;
+        setMemeOnSVGViewer(unMemeGlobal);
+    
+    })
+
+
+    //texte dans l'image souligné
+    document.forms["meme-form"]["meme-underline"]
+    .addEventListener('input',function(evt){
+        unMemeGlobal.underline = evt.target.checked;
+        setMemeOnSVGViewer(unMemeGlobal);
+    
+    })
+
+    document.forms["meme-form"]["meme-italic"]
+    .addEventListener('input',function(evt){
+        unMemeGlobal.italic = evt.target.checked;
+        setMemeOnSVGViewer(unMemeGlobal);
+    
+    })
+
+
+
 }
 
 

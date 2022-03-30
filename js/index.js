@@ -11,3 +11,5 @@ function lorsDuChargementDeLaPage(){
 //add un ecouteur d'evenement
 // losrque DOMContentLoaded est chargé on appelle la fonction lorsDuChargementDeLaPage
 document.addEventListener('DOMContentLoaded',lorsDuChargementDeLaPage);
+
+

@@ -49,6 +49,13 @@ function setMemeOnSVGViewer(meme){
 
 
 function initFormEvents(){
+
+    document.forms["meme-form"]["meme-name"]
+    .addEventListener('input', function(evt){
+        unMemeGlobal.name = evt.target.value;
+        setMemeOnSVGViewer(unMemeGlobal);
+    })
+
     document.forms["meme-form"]["meme-text"]
    // .addEventListener('change', function(evt){
     .addEventListener('input', function(evt){

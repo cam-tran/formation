@@ -6,7 +6,7 @@ function Meme(){
     
     this.id = undefined;
     this.name="Le nom";
-    this.texte="text";
+    this.text="text";
     this.x=0;
     this.y=0;
     this.fontSize=12;
@@ -19,7 +19,7 @@ function Meme(){
 
     this.setDummyValues = function createDummyMeme(params){
         this.name="Dummy demo meme";
-        this.texte="mon texte";
+        this.text="mon texte";
         this.x=30;
         this.y=50;
         this.fontSize=20;

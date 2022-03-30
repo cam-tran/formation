@@ -19,9 +19,8 @@ function setMemeOnSVGViewer(meme){
         meme= new Meme();
         meme.setDummyValues();
     }
-    var svgTextNode =document.querySelector('svg text');
+    var svgTextNode =document.querySelector('svg>text');
     //modif du contenu html de la balise
-    svgTextNode.innerHTML= meme.text;
-
+    svgTextNode.innerHTML = meme.text;
 
 }

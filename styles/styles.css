@@ -1,72 +1,60 @@
- body {
-     height: 99vh;
-     display: flex;
-     flex-direction: column;
- }
-
-
- .navbar-brand {
-     color: grey;
-     font-size: 32pt;
-     font-weight: 900;
-     text-decoration: underline crimson;
-     text-shadow: 20px 30px 25px grey;
-     /*ombre*/
-     font-style: italic;
- }
-
- .navbar-nav, .navbar-nav url, .navbar-nav li, .navbar-nav a, .navbar-brand {
-     height: calc(22pt + 45px);
- }
-
-
- #meme-creator>* {
-     text-align: center;
-     border: 1px solid black;
-
- }
-
-
- #wrapper {
-     flex-grow: 1;
- }
-
- #meme-creator {
-     display: flex;
-     height: 100%;
-
- }
-
- #meme-creator>div:nth-child(1) {
-     flex-grow: 1;
-
- }
-
- #meme-creator>div:nth-child(2) {
-     padding: 10px 20px;
-     min-width: 330px;
-
- }
-
- .flex-2-cols {
-     display: flex;
-     justify-content: space-around;
- }
-
- .flex-2-cols>div>input[type="number"] {
-     width: 100px;
- }
-
- #isJsLoaded.isNotLoaded {
-     background-color: crimson;
-     color: white;
-     text-align: center;
-     font-size: 30px;
- }
-
- #isJsLoaded.isLoaded {
-    background-color: skyblue;
-    color:green;
+body{
+    height: 99vh;
+    display: flex;
+    flex-direction: column;
+}
+#isJsLoaded.isNotLoaded{
+    background-color: crimson;
+    color: white;
+    font-weight: 900;
     text-align: center;
-    font-size: 30px;
+}
+#isJsLoaded.isLoaded{
+    background-color: skyblue;
+    color: white;
+    font-weight: 100;
+    font-size: 8pt;
+    text-align: center;
+}
+.navbar-brand{
+    color:grey;
+    font-size: 22pt;
+    font-weight: 900;
+    /* text-decoration: underline crimson; */
+    text-shadow: 20px 20px 25px white;
+    font-style: italic;
+    margin-right: 60px;
+}
+.navbar-nav, .navbar-nav ul, .navbar-nav li, .navbar-nav a, .navbar-brand{
+    height: calc( 22pt + 45px) ;
+}
+#meme-creator>*{
+    text-align: center;
+    border:1px solid black;
+}
+#wrapper{
+    flex-grow:1
+}
+#meme-creator{
+    display: flex;
+    height: 100%;
+}
+#meme-creator>div:nth-child(1){
+    flex-grow: 1;padding: 10px; display: flex;
+}
+
+#meme-creator>div:nth-child(2){
+    padding:10px 20px;
+    min-width: 333px;
+}
+.flex-2-cols{
+    display: flex;
+    justify-content: space-around;
+}
+.flex-2-cols>div>input[type="number"]{
+   width:100px;
+}
+hr.small{
+    width:50%;
+    margin-left: 25%;
 }

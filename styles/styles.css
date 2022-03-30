@@ -57,7 +57,16 @@
      width: 100px;
  }
 
- #isJsLoaded {
+ #isJsLoaded.isNotLoaded {
      background-color: crimson;
      color: white;
+     text-align: center;
+     font-size: 30px;
  }
+
+ #isJsLoaded.isLoaded {
+    background-color: skyblue;
+    color:green;
+    text-align: center;
+    font-size: 30px;
+}

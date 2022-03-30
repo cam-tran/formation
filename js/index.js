@@ -27,4 +27,11 @@ function setMemeOnSVGViewer(meme){
     //unMemeGlobal.text='toto'
     //setMemeOnSVGViewer(unMemeGlobal) => renvoir undefined
 
+    //x avce decomposition
+    var attrib = svgTextNode.attributes['x'];
+    attrib.value =  meme.x;
+
+    //y sans decomposation
+    svgTextNode.attributes['y'].value =  meme.y;
+
 }

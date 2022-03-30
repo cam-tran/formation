@@ -116,7 +116,25 @@ function initFormEvents(){
     })
 
 
-
 }
+
+ //function setFormValuesFromMeme recupère les valeurs de back-end et mette dans Viewver
+ function setFormValuesFromMeme(meme){
+     if(undefined===meme ){return}
+
+        var form = document.forms["meme-form"];
+        form["meme-name"].value = meme.name;
+        form["meme-text"].value =  meme.text;
+        form["meme-x"].value = meme.x;
+        form["meme-y"].value = meme.y;
+        form["meme-fontSize"].value= meme.fontSize;
+        form["meme-fontWeight"].value = meme.fontWeight;
+        form["meme-underline"].checked= meme.underline;
+        form["meme-italic"].checked = meme.italic;
+        form["meme-color"].value =  meme.color;
+        setMemeOnSVGViewer(meme);
+
+ }
+
 
 

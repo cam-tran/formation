@@ -7,7 +7,7 @@ function lorsDuChargementDeLaPage(){
     console.log('JS est chargé', baliseisJsLoaded );
     baliseisJsLoaded.innerHTML = 'JS chargé';
     baliseisJsLoaded.className='isLoaded';
-    initFormEvents();
+    initFormEvents(); //addEventListener
 }
 //add un ecouteur d'evenement
 // losrque DOMContentLoaded est chargé on appelle la fonction lorsDuChargementDeLaPage
@@ -47,7 +47,9 @@ function setMemeOnSVGViewer(meme){
 
 }
 
-
+/**
+ * addEventListener
+ */
 function initFormEvents(){
 
     document.forms["meme-form"]["meme-name"]

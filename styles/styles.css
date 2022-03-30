@@ -1,57 +1,63 @@
- body{
+ body {
      height: 99vh;
-     display:flex;
+     display: flex;
      flex-direction: column;
  }
 
 
-.navbar-brand{
-    color: grey;
-    font-size: 32pt;
-    font-weight: 900;
-    text-decoration: underline crimson;
-    text-shadow: 20px 30px 25px grey;  /*ombre*/
-    font-style: italic;
-   }
+ .navbar-brand {
+     color: grey;
+     font-size: 32pt;
+     font-weight: 900;
+     text-decoration: underline crimson;
+     text-shadow: 20px 30px 25px grey;
+     /*ombre*/
+     font-style: italic;
+ }
 
-.navbar-nav, .navbar-nav url, .navbar-nav li, .navbar-nav a, .navbar-brand {
-    height: calc(22pt + 45px);
-}
-
-
-#meme-creator>*{
-    text-align: center;
-    border:1px solid black;
-
-}
+ .navbar-nav, .navbar-nav url, .navbar-nav li, .navbar-nav a, .navbar-brand {
+     height: calc(22pt + 45px);
+ }
 
 
-#wrapper{
-    flex-grow: 1;
-}
+ #meme-creator>* {
+     text-align: center;
+     border: 1px solid black;
 
-#meme-creator{
-   display: flex;
-   height: 100%;
+ }
 
-}
 
-#meme-creator>div:nth-child(1){
-    flex-grow: 1;
+ #wrapper {
+     flex-grow: 1;
+ }
 
-}
+ #meme-creator {
+     display: flex;
+     height: 100%;
 
-#meme-creator>div:nth-child(2){
-    padding: 10px 20px;
-    min-width: 330px;
+ }
 
-}
+ #meme-creator>div:nth-child(1) {
+     flex-grow: 1;
 
-.flex-2-cols{
-    display: flex;
-    justify-content: space-around;
-}
+ }
 
-.flex-2-cols>div>input[type="number"]{
-        width: 100px;
-}
+ #meme-creator>div:nth-child(2) {
+     padding: 10px 20px;
+     min-width: 330px;
+
+ }
+
+ .flex-2-cols {
+     display: flex;
+     justify-content: space-around;
+ }
+
+ .flex-2-cols>div>input[type="number"] {
+     width: 100px;
+ }
+
+ #isJsLoaded {
+     background-color: crimson;
+     color: white;
+ }

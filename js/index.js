@@ -42,4 +42,6 @@ function setMemeOnSVGViewer(meme){
 
     svgTextNode.style.fontStyle = (meme.italic ? 'italic':'normal');
 
+    svgTextNode.style.textDecoration = (meme.underline ? 'underline':'none');
+
 }

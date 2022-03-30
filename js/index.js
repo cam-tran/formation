@@ -20,7 +20,11 @@ function setMemeOnSVGViewer(meme){
         meme.setDummyValues();
     }
     var svgTextNode =document.querySelector('svg>text');
-    //modif du contenu html de la balise
+    //modif du contenu html de la balise, ici c'est le texte de l'image
     svgTextNode.innerHTML = meme.text;
+
+    //attention si pas de return ça renvoi undefine dans console
+    //unMemeGlobal.text='toto'
+    //setMemeOnSVGViewer(unMemeGlobal) => renvoir undefined
 
 }

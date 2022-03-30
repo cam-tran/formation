@@ -101,6 +101,13 @@ function initFormEvents(){
     
     })
 
+    document.forms["meme-form"]["meme-color"]
+    .addEventListener('input',function(evt){
+        unMemeGlobal.color = evt.target.value;
+        setMemeOnSVGViewer(unMemeGlobal);
+    
+    })
+
 
 
 }

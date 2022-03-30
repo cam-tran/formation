@@ -132,7 +132,7 @@ function initFormEvents(){
         form["meme-underline"].checked= meme.underline;
         form["meme-italic"].checked = meme.italic;
         form["meme-color"].value =  meme.color;
-        setMemeOnSVGViewer(meme);
+        setMemeOnSVGViewer(meme);  //appelle cette function pour afficher dans la vue
 
  }
 

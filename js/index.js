@@ -34,4 +34,12 @@ function setMemeOnSVGViewer(meme){
     //y sans decomposation
     svgTextNode.attributes['y'].value =  meme.y;
 
+
+    svgTextNode.attributes['font-size'].value =  meme.fontSize;
+    svgTextNode.style.fontWeight =  meme.fontWeight;
+
+    svgTextNode.attributes['fill'].value = meme.color;
+
+    svgTextNode.style.fontStyle = (meme.italic ? 'italic':'normal');
+
 }

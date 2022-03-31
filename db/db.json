@@ -1,0 +1,33 @@
+{
+    "images": [
+        {
+            "id": 1,
+            "href": "futurama-suicide.jpg",
+            "w": 800,
+            "h": 450,
+            "name": "futurama scuicide cab"
+        },
+        {
+            "id": 2,
+            "href": "caro.jpg",
+            "w": 1600,
+            "h": 1200,
+            "name": "caro"
+        }
+    ],
+    "memes": [
+        {
+            "id":0,
+            "name": "Dummy demo meme",
+            "text": "Breizh ma bro",
+            "x": 50,
+            "y": 50,
+            "fontSize": 20,
+            "fontWeight": "900",
+            "underline": true,
+            "italic": false,
+            "color": "#ACACAC",
+            "image": "futurama-suicide.jpg"
+        }
+    ]
+}

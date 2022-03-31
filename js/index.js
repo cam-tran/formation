@@ -62,6 +62,7 @@ function setMemeOnSVGViewer(meme){
         svgImg.setAttribute('xlink:href','');
     }
 
+    
 }
 
 /**
@@ -138,6 +139,13 @@ function initForm(){
     .addEventListener('change', function(evt){
         unMemeGlobal.imageId = parseInt(evt.target.value);
         setMemeOnSVGViewer(unMemeGlobal);
+    })
+
+    document.forms["meme-form"].addEventListener('submit',function(evt){
+        evt.preventDefault();
+        (new CRUD('http://localhost:5679')).post('/memes',function(response){
+                alert('c\'est enregistrer ...bonne soiree a demain')
+        },unMemeGlobal,'application/json');
     })
 
     setFormValuesFromMeme(unMemeGlobal);

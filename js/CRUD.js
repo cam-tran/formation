@@ -68,9 +68,16 @@ function CRUD(RestAdr){
     this.get= function(ressourceUrl,succesCallback,id, unsuccesCallback){
         this.callXHR(ressourceUrl, succesCallback,'GET',id, undefined, undefined,unsuccesCallback );
     }
-
+/**
+ * 
+ * @param {*} ressourceUrl 
+ * @param {*} succesCallback 
+ * @param {*} body 
+ * @param {*} contentType 
+ * @param {*} unsuccesCallback 
+ */
     this.post = function(ressourceUrl,succesCallback,body, contentType,unsuccesCallback){
-        this.callXHR(ressourceUrl, succesCallback,'POST', body,contentType, unsuccesCallback);
+        this.callXHR(ressourceUrl, succesCallback,'POST',undefined, body,contentType, unsuccesCallback);
     }
 
     this.put= function(ressourceUrl,succesCallback,id, body,contentType, unsuccesCallback){

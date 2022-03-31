@@ -14,7 +14,7 @@
       "h": 470,
       "name": "image1"
     }
-],
+  ],
   "memes": [
     {
       "id": 0,
@@ -30,17 +30,17 @@
       "imageId": 1
     },
     {
-        "name": "name image1",
-        "text": "texte images1",
-        "x": 50,
-        "y": 50,
-        "fontSize": 20,
-        "fontWeight": "900",
-        "underline": false,
-        "italic": true,
-        "color": "#ABCEA0",
-        "imageId": 2,
-        "id": 2
-      }
+      "name": "name image1",
+      "text": "texte images1",
+      "x": 50,
+      "y": 50,
+      "fontSize": 20,
+      "fontWeight": "900",
+      "underline": false,
+      "italic": true,
+      "color": "#ABCEA0",
+      "imageId": 2,
+      "id": 2
+    }
   ]
 }

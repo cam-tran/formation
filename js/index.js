@@ -45,6 +45,23 @@ function setMemeOnSVGViewer(meme){
 
     svgTextNode.style.textDecoration = (meme.underline ? 'underline':'none');
 
+    //gestion affiche image
+    var img = listeGlobalImages.find(function(elem){
+        return meme.imageId ===  elem.id;
+    })
+    
+    if(undefined !== img){
+        var svgNode = document.querySelector('svg');
+        svgNode.setAttribute('viewBox','0 0 '+img.w+' '+ img.h);
+        var svgImg = svgNode.querySelector('image');
+        svgImg.setAttribute('xlink:href','/img/'+img.href);
+    }else{
+        var svgNode = document.querySelector('svg');
+        svgNode.setAttribute('viewBox','0 0 500 500');
+        var svgImg = svgNode.querySelector('image');
+        svgImg.setAttribute('xlink:href','');
+    }
+
 }
 
 /**
@@ -117,7 +134,13 @@ function initForm(){
     
     })
 
+    document.forms["meme-form"]["meme-image"]
+    .addEventListener('change', function(evt){
+        unMemeGlobal.imageId = parseInt(evt.target.value);
+        setMemeOnSVGViewer(unMemeGlobal);
+    })
 
+    setFormValuesFromMeme(unMemeGlobal);
 
     //index.js faiat appel à loadGlobalesImages de meme-es5.js et passe la fonction callback ici est loadSelectWithImages
     //permettant de remplir la liste images dans le DOM

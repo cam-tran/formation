@@ -5,17 +5,10 @@
       "href": "futurama-suicide.jpg",
       "w": 800,
       "h": 450,
-      "name": "futurama scuicide cab"
+      "name": "futurama suicide cab"
     },
     {
       "id": 2,
-      "href": "caro.jpg",
-      "w": 1600,
-      "h": 1200,
-      "name": "caro"
-    },
-    {
-      "id": 3,
       "href": "image1.jpg",
       "w": 281,
       "h": 470,
@@ -25,8 +18,8 @@
   "memes": [
     {
       "id": 0,
-      "name": "Dummy demo meme",
-      "text": "Breizh ma bro",
+      "name": "meme suicide",
+      "text": "texte suicide",
       "x": 50,
       "y": 50,
       "fontSize": 20,
@@ -37,17 +30,17 @@
       "imageId": 1
     },
     {
-      "name": "REST meme",
-      "text": "REST ma bro",
-      "x": 50,
-      "y": 50,
-      "fontSize": 20,
-      "fontWeight": "900",
-      "underline": false,
-      "italic": true,
-      "color": "#ABCEA0",
-      "imageId": 2,
-      "id": 1
-    }
+        "name": "name image1",
+        "text": "texte images1",
+        "x": 50,
+        "y": 50,
+        "fontSize": 20,
+        "fontWeight": "900",
+        "underline": false,
+        "italic": true,
+        "color": "#ABCEA0",
+        "imageId": 2,
+        "id": 2
+      }
   ]
 }

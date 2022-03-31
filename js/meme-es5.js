@@ -14,7 +14,7 @@ function Meme(){
     this.underline=false;
     this.italic=false;
     this.color='#000000';
-    this.image ='image1.jpg';
+    this.imageId =undefined;
     console.log('for meme construite',this);
 
     this.setDummyValues = function createDummyMeme(params){
@@ -27,7 +27,7 @@ function Meme(){
         this.underline=true;
         this.italic=false;
         this.color='#ACACAC';
-        this.image ='image1.jpg';
+        this.imageId =1;
     }
 }
 

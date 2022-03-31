@@ -44,8 +44,8 @@ function CRUD(RestAdr){
             if(undefined !== succesCallback && typeof(succesCallback) ==='function'){
                 succesCallback(xhr.response);
             }
-            console.log(xhr.response);
-            console.log(evt);
+            //console.log(xhr.response);
+            //console.log(evt);
         }
 
         //envoi request
@@ -89,7 +89,7 @@ function CRUD(RestAdr){
 }
 
 var httpCaller=  new CRUD('http://localhost:5679');
-httpCaller.get('/images', function(response) {console.log(response);});
+//httpCaller.get('/images', function(response) {console.log(response);});
 
 
 

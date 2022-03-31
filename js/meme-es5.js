@@ -35,3 +35,12 @@ function Meme(){
 var unMemeGlobal= Object.seal(new Meme());
 unMemeGlobal.setDummyValues();
 
+var listeGlobalImages=[];
+function loadGlobalesImages(callback){
+    var callerHTTP = new CRUD('http://localhost:5679');
+    callerHTTP.get('/images', function(response){
+        listeGlobalImages= JSON.parse(response);
+        callback(listeGlobalImages);
+    })
+}
+

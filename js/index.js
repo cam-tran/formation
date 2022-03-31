@@ -7,7 +7,7 @@ function lorsDuChargementDeLaPage(){
     console.log('JS est chargé', baliseisJsLoaded );
     baliseisJsLoaded.innerHTML = 'JS chargé';
     baliseisJsLoaded.className='isLoaded';
-    initFormEvents(); //addEventListener
+    initForm(); //addEventListener
 }
 //add un ecouteur d'evenement
 // losrque DOMContentLoaded est chargé on appelle la fonction lorsDuChargementDeLaPage
@@ -50,7 +50,7 @@ function setMemeOnSVGViewer(meme){
 /**
  * addEventListener
  */
-function initFormEvents(){
+function initForm(){
 
     document.forms["meme-form"]["meme-name"]
     .addEventListener('input', function(evt){
@@ -118,6 +118,12 @@ function initFormEvents(){
     })
 
 
+
+    //index.js faiat appel à loadGlobalesImages de meme-es5.js et passe la fonction callback ici est loadSelectWithImages
+    //permettant de remplir la liste images dans le DOM
+    //c'est à dire une fois que le chargement d'images 
+    loadGlobalesImages(loadSelectWithImages);
+
 }
 
  //function setFormValuesFromMeme recupère les valeurs de back-end et mette dans Viewver
@@ -139,4 +145,16 @@ function initFormEvents(){
  }
 
 
-
+/**
+ * 
+ * @param {Array} images 
+ */
+ function loadSelectWithImages(images){
+    var select =document.forms["meme-form"]["meme-image"];
+    images.forEach(function(unObjetDuTableau,postionDeElement){
+       var opt= document.createElement('option');
+       opt.value =unObjetDuTableau.id;
+       opt.innerHTML= unObjetDuTableau.name;
+       select.appendChild(opt);
+    })
+}

@@ -56,9 +56,45 @@ function CRUD(RestAdr){
         console.log('SENT ' + method + '' + fullUrl);
     }
 
+    /**
+     * 
+     * @param {*} ressourceUrl 
+     * @param {*} succesCallback 
+     * @param {*} id 
+     * @param {*} no 
+     * @param {*} succesCallback 
+     */
+
+    this.get= function(ressourceUrl,succesCallback,id, unsuccesCallback){
+        this.callXHR(ressourceUrl, succesCallback,'GET',id, undefined, undefined,unsuccesCallback );
+    }
+
+    this.post = function(ressourceUrl,succesCallback,body, contentType,unsuccesCallback){
+        this.callXHR(ressourceUrl, succesCallback,'POST', body,contentType, unsuccesCallback);
+    }
+
+    this.put= function(ressourceUrl,succesCallback,id, body,contentType, unsuccesCallback){
+        this.callXHR(ressourceUrl, succesCallback,'PUT',id, body,contentType, unsuccesCallback);
+    }
+
+    this.patch= function(ressourceUrl,succesCallback,id, body,contentType,unsuccesCallback){
+        this.callXHR(ressourceUrl, succesCallback,'PATCH',id, body,contentType, unsuccesCallback);
+    }
+
+    this.remove= function(ressourceUrl,succesCallback,id,unsuccesCallback){
+        this.callXHR(ressourceUrl, succesCallback,'DELETE',id, undefined,undefined, unsuccesCallback);
+    }
+
+   
 }
 
-var xhr = new CRUD('http://localhost:5679');
-xhr.callXHR('/images',function(){});  //GET par defaut
+var httpCaller=  new CRUD('http://localhost:5679');
+httpCaller.get('/images', function(response) {console.log(response);});
+
+
+
+//var xhr = new CRUD('http://localhost:5679');
+
+//xhr.callXHR('/images',function(){});  //GET par defaut
 
 //xhr.callXHR('/images',function(){},'POST', undefined,{ch1:'hello'},'application/json');

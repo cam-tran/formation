@@ -9,6 +9,27 @@ function CRUD(RestAdr){
             return;
         }
         if(undefined===method){method='GET'};
+
+        //instancviation d'un objet XMLHttpRequest
+        var xhr = new XMLHttpRequest();
+
+        //prepa ouverture
+        var fullUrl = RestAdr+ressourceUrl
+        if(undefined !==id){fullUrl='/'+id};
+
+        xhr.open(method,fullUrl);
+
+        //gestion de event
+        xhr.onreadystatechange = function(evt){
+            if(xhr.readyState < XMLHttpRequest.DONE){return};
+            if(xhr.status >= 400){return};
+            console.log(xhr.response);
+            console.log(evt);
+        }
+
+        //envoi
+        xhr.send();
+        console.log('SENT ' + method + '' + fullUrl);
     }
 
 }

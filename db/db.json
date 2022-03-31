@@ -13,6 +13,13 @@
             "w": 1600,
             "h": 1200,
             "name": "caro"
+        },
+        {
+            "id": 3,
+            "href": "image1.jpg",
+            "w": 281,
+            "h": 470,
+            "name": "image1"
         }
     ],
     "memes": [
@@ -27,7 +34,7 @@
             "underline": true,
             "italic": false,
             "color": "#ACACAC",
-            "image": "futurama-suicide.jpg"
+            "imageId": 1
         }
     ]
 }

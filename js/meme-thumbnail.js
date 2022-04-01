@@ -17,6 +17,10 @@
         aNode.innerHTML = e.id+':'+e.name;
         aNode.addEventListener('click', function(evt){
             evt.preventDefault();  //car où href=# il ne fait rien
+            
+            //surcharge de l'url sans reload de page
+            history.pushState('','','/edit/memes/'+1);
+
             unMemeGlobal =e;
             setFormValuesFromMeme(unMemeGlobal);
             setMemeOnSVGViewer(unMemeGlobal);

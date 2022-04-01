@@ -44,3 +44,14 @@ function loadGlobalesImages(callback){
     })
 }
 
+
+var listeGlobalMemes=[];
+function loadGlobalesMemes(callback){
+    var callerHTTP = new CRUD('http://localhost:5679');
+    callerHTTP.get('/memes', function(response){
+        listeGlobalMemes= JSON.parse(response);
+        console.log(listeGlobalMemes);
+        callback(listeGlobalMemes);
+    })
+}
+

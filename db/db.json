@@ -30,6 +30,7 @@
       "imageId": 1
     },
     {
+      "id": 1,
       "name": "name image1",
       "text": "texte images1",
       "x": 50,
@@ -39,8 +40,8 @@
       "underline": false,
       "italic": true,
       "color": "#ABCEA0",
-      "imageId": 2,
-      "id": 2
+      "imageId": 2
+      
     }
   ]
 }

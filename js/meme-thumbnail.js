@@ -10,7 +10,18 @@
     var ulNode=document.createElement('ul');
     memes.forEach(function (e,i) {
         var liNode=document.createElement('li');
-        liNode.innerHTML=e.id+':'+e.name;
+        //liNode.innerHTML=e.id+':'+e.name;
+
+        var aNode = document.createElement('a');
+        aNode.href="#";
+        aNode.innerHTML = e.id+':'+e.name;
+        aNode.addEventListener('click', function(evt){
+            //evt.preventDefault();
+            unMemeGlobal =e;
+            setFormValuesFromMeme(unMemeGlobal);
+            setMemeOnSVGViewer(unMemeGlobal);
+        })
+        liNode.appendChild(aNode);
         ulNode.appendChild(liNode); 
     }); 
     nodeToFill.querySelector('ul').remove();

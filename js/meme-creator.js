@@ -180,20 +180,61 @@ function setMemeValuesInFormInputs(meme) {
 
 function initMemeCreatorView(wrapperNode,id) {
     //appel xhr mais avec promise ES6
-    fetch(location.origin+'/views/meme-creator.html')
+    const promiseCreator = fetch(location.origin+'/views/meme-creator.html')
+    //1ere etape de reception -> transformation du flux recu en text
         .then(f=>{
             return  f.text();
         })
+
+    const promiseViewer = fetch(location.origin+'/views/meme-svg-viewer.html')
+       .then(f=>{
+            return  f.text();
+        })
+
+        //recption rest par promise avce template string pour template , literale
+    const promiseImages = fetch(`${ARD_REST_SRV}/images`)
+        .then(f=>{
+             return  f.json();
+         })
+
+    Promise.all([promiseCreator,promiseViewer,promiseImages])
         .then(resp=>{
+            //creation d'un parser pour un DOM html
             var domparser=new DOMParser();
-            var doc=domparser.parseFromString(resp, 'text/html');
+            // creation dun document DOM constitué dans le body de la chaine HTML recu par le fetch
+            //resp[0] correspond à promiseCreator
+            var doc=domparser.parseFromString(resp[0], 'text/html');
+            //je cherche les enfants existant dans la section que je remplirai dans la page qui est a l'ecran
             let wrapperChildren=wrapperNode.querySelectorAll('*');
+            //si il y a des enfants
             if(undefined!==wrapperChildren){
+                //pour chaque enfant je demande leur suppression de la page affiché pour vider le wrapper
                 wrapperChildren.forEach(e=>{e.remove()});
             }
+            //jajoute dans le conteneur de la page à l'ecran le contenu sous forme de Node(document) HTML 
             wrapperNode.appendChild(doc.querySelector('#meme-creator'))
 
+            //partie 2
+            //ajout svg viewer dans le creator
+            //res[1] correspond à promiseViewer
+            var docSvg=domparser.parseFromString(resp[1], 'text/html');
+            wrapperNode.querySelector('#meme-viewer').appendChild(docSvg.querySelector('svg'));
+
             
-           // loadGlobalesMemes(fillMemeThumbnail);
+
+            //partie 3
+            listeGlobalImages= resp[2];
+            
+            unMemeGlobal = new Meme();
+            initForm();
+            loadSelectWithImages(listeGlobalImages);
+            setMemeValuesInFormInputs(unMemeGlobal);
+            setMemeOnSVGViewer(unMemeGlobal);
+            
+
+
+
+
+
         })
 }

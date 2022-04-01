@@ -16,7 +16,7 @@
         aNode.href="#";
         aNode.innerHTML = e.id+':'+e.name;
         aNode.addEventListener('click', function(evt){
-            //evt.preventDefault();
+            evt.preventDefault();  //car où href=# il ne fait rien
             unMemeGlobal =e;
             setFormValuesFromMeme(unMemeGlobal);
             setMemeOnSVGViewer(unMemeGlobal);
